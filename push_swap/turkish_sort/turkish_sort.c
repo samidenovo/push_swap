@@ -6,7 +6,7 @@
 /*   By: samalves <samalves@student.42berlin.d      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/04 14:03:27 by samalves          #+#    #+#             */
-/*   Updated: 2025/08/04 15:20:17 by samalves         ###   ########.fr       */
+/*   Updated: 2025/08/05 23:23:19 by samalves         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	turkish_sort(t_stack *a, t_stack *b)
 	init_sort(a, b);
 	while (a->size != 3)
 	{
-		//ft costs A + B
+		//ft costs A + B : cheapest_element(a, b) gives the position to the cheapest to move
 		//ft movement + optimization of group movement
 	}
 	//ft organize A

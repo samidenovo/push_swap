@@ -6,7 +6,7 @@
 /*   By: samalves <samalves@student.42berlin.d      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/23 22:11:08 by samalves          #+#    #+#             */
-/*   Updated: 2025/07/29 18:34:05 by samalves         ###   ########.fr       */
+/*   Updated: 2025/08/05 23:10:31 by samalves         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,5 @@ int	error_exit(t_stack *stack_a, t_stack *stack_b, char **tokens)
 	if (tokens)
 		free_tokens(tokens);
 	write(2, "Error\n", 6);
-	return (1);
+	exit (1);
 }
