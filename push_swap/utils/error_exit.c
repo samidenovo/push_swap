@@ -6,13 +6,13 @@
 /*   By: samalves <samalves@student.42berlin.d      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/23 22:11:08 by samalves          #+#    #+#             */
-/*   Updated: 2025/08/05 23:10:31 by samalves         ###   ########.fr       */
+/*   Updated: 2025/08/06 14:01:10 by samalves         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	error_exit(t_stack *stack_a, t_stack *stack_b, char **tokens)
+void	error_exit(t_stack *stack_a, t_stack *stack_b, char **tokens)
 {
 	if (stack_a)
 		free_stack(stack_a);
