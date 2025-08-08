@@ -12,9 +12,9 @@
 
 void	init_sort(t_stack *a, t_stack *b)
 {
-	push_x(a, b);
+	push_x(b ,a);
 	write(1, "pb\n", 3);
-	push_x(a, b);
+	push_x(b, a);
 	write(1, "pb\n", 3);
 	if (b->head->value < b->tail->value)
 	{
