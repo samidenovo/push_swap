@@ -18,4 +18,6 @@ void	rotate_x(t_stack *a)
 		return ;
 	a->head = a->head->next;
 	a->tail = a->tail->next;
+	a->head->prev = a->tail;
+	a->tail->next = a->head;
 }

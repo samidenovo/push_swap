@@ -1,31 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   free_stack.c                                       :+:      :+:    :+:   */
+/*   merge_stacks.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: samalves <samalves@student.42berlin.d      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/29 18:03:19 by samalves          #+#    #+#             */
-/*   Updated: 2025/08/18 14:08:52 by samalves         ###   ########.fr       */
+/*   Created: 2025/08/13 14:24:49 by samalves          #+#    #+#             */
+/*   Updated: 2025/08/17 17:55:37 by samalves         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	free_stack(t_stack *stack)
+void	merge_stacks(t_stack *a, t_stack *b)
 {
-	t_node	*current;
-	t_node	*next;
-	int		i;
-
-	current = stack->head;
-	i = 0;
-	while (i < stack->size)
+	while (b->size > 0)
 	{
-		next = current->next;
-		free (current);
-		current = next;
-		i++;
+		while (a->tail->value < a->head->value && a->tail->value > b->head->value)
+		{
+			reverse_rotate_x(a);
+			write(1, "rra\n", 4);
+		}
+		push_x(a, b);
+		write (1, "pa\n", 3);
 	}
-	free (stack);
+	while (a->tail->value < a->head->value && b->size == 0)
+	{
+			reverse_rotate_x(a);
+			write(1, "rra\n", 4);
+	}
 }

@@ -16,6 +16,6 @@ void	reverse_rotate_x(t_stack *a)
 {
 	if (!a || a->size <= 1)
 		return ;
-	a->head = a->tail;
 	a->tail = a->tail->prev;
+	a->head = a->tail->next;
 }

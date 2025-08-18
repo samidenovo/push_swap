@@ -1,31 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   free_stack.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: samalves <samalves@student.42berlin.d      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/29 18:03:19 by samalves          #+#    #+#             */
-/*   Updated: 2025/08/18 14:08:52 by samalves         ###   ########.fr       */
+/*   Created: 2025/08/13 11:09:42 by samalves          #+#    #+#             */
+/*   Updated: 2025/08/13 11:09:57 by samalves         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	free_stack(t_stack *stack)
+char	*ft_strdup(const char *s)
 {
-	t_node	*current;
-	t_node	*next;
+	char	*dup;
 	int		i;
 
-	current = stack->head;
 	i = 0;
-	while (i < stack->size)
+	while (s[i])
+		i++;
+	dup = malloc((i + 1) * sizeof(char));
+	if (!dup)
+		return (NULL);
+	i = 0;
+	while (s[i])
 	{
-		next = current->next;
-		free (current);
-		current = next;
+		dup[i] = s[i];
 		i++;
 	}
-	free (stack);
+	dup[i] = '\0';
+	return (dup);
 }

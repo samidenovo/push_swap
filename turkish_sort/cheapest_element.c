@@ -6,7 +6,7 @@
 /*   By: samalves <samalves@student.42berlin.d      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/05 23:21:38 by samalves          #+#    #+#             */
-/*   Updated: 2025/08/05 23:21:45 by samalves         ###   ########.fr       */
+/*   Updated: 2025/08/15 19:29:39 by samalves         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static int	cost_b(int value, t_stack *b)
 	if (b->size >= 1)
 	{
 		node = b->head;
-		while (value < node->next->value && node->next != b->head)
+		while (value < node->value && position < b->size)
 		{
 			node = node->next;
 			position++;
@@ -53,7 +53,7 @@ static int	find_position(int *arr, int size)
 	int	position;
 
 	i = 0;
-	position = 0;
+	position = size / 2;
 	while (i < size)
 	{
 		if (arr[i] < arr[position])

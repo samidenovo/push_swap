@@ -22,6 +22,7 @@ void	swap_x(t_stack *stack)
 	first = stack->head;
 	second = first->next;
 	second->next->prev = first;
+	first->next = second->next;
 	second->prev = first->prev;
 	first->prev->next = second;
 	second->next = first;

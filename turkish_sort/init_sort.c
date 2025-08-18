@@ -6,9 +6,11 @@
 /*   By: samalves <samalves@student.42berlin.d      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/04 14:15:48 by samalves          #+#    #+#             */
-/*   Updated: 2025/08/11 20:35:29 by samalves         ###   ########.fr       */
+/*   Updated: 2025/08/13 10:58:47 by samalves         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "push_swap.h"
 
 void	init_sort(t_stack *a, t_stack *b)
 {
